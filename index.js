@@ -1,18 +1,27 @@
 function calcular() {
     let salarioBrutoTxt = document.getElementById('salario').value
+    if (salarioBrutoTxt == "") {
+        salarioBrutoTxt = "0"
+    }
     let salarioBruto = parseFloat(salarioBrutoTxt)
 
     let jornadaTxt = document.getElementById('jornada').value
-    let jornada = parseFloat(jornadaTxt)
-
-    if(jornada < 1) {
-        jornada = 1
+    if (jornadaTxt == "") {
+        jornadaTxt = "1"
     }
+    let jornada = parseFloat(jornadaTxt)
+    
 
     let qtdExtra50Txt = document.getElementById('extra50').value
+    if (qtdExtra50Txt == "") {
+        qtdExtra50Txt = "0"
+    }
     let qtdExtra50 = parseFloat(qtdExtra50Txt)
 
     let qtdExtra100Txt = document.getElementById('extra100').value
+    if (qtdExtra100Txt == "") {
+        qtdExtra100Txt = "0"
+    }
     let qtdExtra100 = parseFloat(qtdExtra100Txt)
 
     let valorHora = salarioBruto / jornada
@@ -93,4 +102,9 @@ function calcular() {
 
     document.querySelector('.inss').innerHTML = aliquotaInss
     document.querySelector('.irpf').innerHTML = aliquotaIrpf
+}
+
+function reset() {
+    document.getElementById('form').reset();
+    window.location.reload()
 }

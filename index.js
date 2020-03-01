@@ -106,5 +106,14 @@ function calcular() {
 
 function reset() {
     document.getElementById('form').reset();
-    window.location.reload()
+    document.querySelector('div#salarioHora > .valor').innerHTML = ''
+    document.querySelector('div#salarioExtra50 > .valor').innerHTML = ''
+    document.querySelector('div#salarioExtra100 > .valor').innerHTML = ''
+    document.querySelector('div#totalExtra50 > .valor').innerHTML = ''
+    document.querySelector('div#totalExtra100 > .valor').innerHTML = ''
+    document.querySelector('div#totalExtras > .valor').innerHTML = ''
+    document.querySelector('div#salarioBruto > .valor').innerHTML = ''
+    document.querySelector('div#resInss > .valor').innerHTML = ''
+    document.querySelector('div#resIrpf > .valor').innerHTML = ''
+    document.querySelector('div#salarioLiquido > .valor').innerHTML = ''
 }
